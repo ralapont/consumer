@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: consumer
+
+server:
+  port: 8090
+
+app:
+  config:
+    topic-name: avro-topic
+    grooup-id: avro-group		
