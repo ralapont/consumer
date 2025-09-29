@@ -1,13 +1,13 @@
 {
   "type": "record",
-  "name": "ClienteAvro",
-  "namespace": "com.example.demo.avro",
+  "name": "clienteAvro",
+  "namespace": "com.example.productor.avro",
   "fields": [
     {
-      "name": "Cliente",
+      "name": "cliente",
       "type": {
         "type": "record",
-        "name": "Cliente",
+        "name": "cliente",
         "fields": [
           {
             "name": "nombre",
@@ -26,10 +26,10 @@
             "type": "string"
           },
           {
-            "name": "Direccion",
+            "name": "direccion",
             "type": {
               "type": "record",
-              "name": "Direccion",
+              "name": "direccion",
               "fields": [
                 {
                   "name": "tipoVia",
