@@ -12,17 +12,17 @@ import org.springframework.kafka.core.ConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.support.serializer.ErrorHandlingDeserializer;
 
-import com.example.productor.avro.SimpleMessage;
+import com.example.demo.avro.ClienteAvro;
 
 @Configuration
 public class KafkaConsumerConfig {
 
     @Bean
-    public ConsumerFactory<String, SimpleMessage> consumerFactory() {
+    public ConsumerFactory<String, ClienteAvro> consumerFactory() {
 
         Map<String, Object> props = new HashMap<>();
         props.put(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG, "localhost:9092");
-        props.put(ConsumerConfig.GROUP_ID_CONFIG, "avro-group");
+        props.put(ConsumerConfig.GROUP_ID_CONFIG, "avro-compl-group");
         // Configuración de ErrorHandlingDeserializer para key y value
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, ErrorHandlingDeserializer.class);
@@ -36,8 +36,8 @@ public class KafkaConsumerConfig {
     }
 
     @Bean
-    public ConcurrentKafkaListenerContainerFactory<String, SimpleMessage> kafkaListenerContainerFactory() {
-        ConcurrentKafkaListenerContainerFactory<String, SimpleMessage> factory =
+    public ConcurrentKafkaListenerContainerFactory<String, ClienteAvro> kafkaListenerContainerFactory() {
+        ConcurrentKafkaListenerContainerFactory<String, ClienteAvro> factory =
                 new ConcurrentKafkaListenerContainerFactory<>();
         factory.setConsumerFactory(consumerFactory());
         return factory;

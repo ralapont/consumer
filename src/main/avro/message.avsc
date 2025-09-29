@@ -1,9 +1,0 @@
-{
-	"type": "record",
-	"name": "SimpleMessage",
-	"namespace": "com.example.productor.avro",
-	"fields": [
-		{"name": "content", "type":"string", "doc": "Message content"},
-		{"name": "date_time", "type":"string", "doc": "Datetime when the message was generated"}
-	]
-}

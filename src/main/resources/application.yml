@@ -7,5 +7,5 @@ server:
 
 app:
   config:
-    topic-name: avro-topic
-    grooup-id: avro-group		
+    topic-name: avro-compl-topic
+    grooup-id: avro-compl-group	

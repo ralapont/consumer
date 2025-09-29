@@ -1,0 +1,73 @@
+{
+  "type": "record",
+  "name": "ClienteAvro",
+  "namespace": "com.example.demo.avro",
+  "fields": [
+    {
+      "name": "Cliente",
+      "type": {
+        "type": "record",
+        "name": "Cliente",
+        "fields": [
+          {
+            "name": "nombre",
+            "type": "string"
+          },
+          {
+            "name": "apellido",
+            "type": "string"
+          },
+          {
+            "name": "nif",
+            "type": "string"
+          },
+          {
+            "name": "telefono",
+            "type": "string"
+          },
+          {
+            "name": "Direccion",
+            "type": {
+              "type": "record",
+              "name": "Direccion",
+              "fields": [
+                {
+                  "name": "tipoVia",
+                  "type": "string"
+                },
+                {
+                  "name": "nombre",
+                  "type": "string"
+                },
+                {
+                  "name": "numero",
+                  "type": "string"
+                },
+                {
+                  "name": "piso",
+                  "type": "string"
+                },
+                {
+                  "name": "codigoPostal",
+                  "type": "string"
+                },
+                {
+                  "name": "poblacion",
+                  "type": "string"
+                },
+                {
+                  "name": "provincia",
+                  "type": "string"
+                }
+              ]
+            }
+          },
+          {
+            "name": "edad",
+            "type": "long"
+          }
+        ]
+      }
+    }
+  ]
+}

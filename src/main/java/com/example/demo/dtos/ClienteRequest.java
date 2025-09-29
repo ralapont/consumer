@@ -6,8 +6,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data @NoArgsConstructor @AllArgsConstructor @Builder
-public class MessageRequest {
-	private String content;
-	private String datetime;
+public class ClienteRequest {
 
+	private String nombre;
+	private String apellido;
+	private String nif;
+	private String telefono;
+	private DireccionRequest direccion;
+	private Integer edad;
 }
