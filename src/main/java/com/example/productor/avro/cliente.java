@@ -13,24 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class cliente extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = 1555076767778761240L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"cliente\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"apellido\",\"type\":\"string\"},{\"name\":\"nif\",\"type\":\"string\"},{\"name\":\"telefono\",\"type\":\"string\"},{\"name\":\"direccion\",\"type\":{\"type\":\"record\",\"name\":\"direccion\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}},{\"name\":\"edad\",\"type\":\"long\"}]}");
+public class Cliente extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -1626805536405853862L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Cliente\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"apellido\",\"type\":\"string\"},{\"name\":\"nif\",\"type\":\"string\"},{\"name\":\"telefono\",\"type\":\"string\"},{\"name\":\"Direccion\",\"type\":{\"type\":\"record\",\"name\":\"Direccion\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}},{\"name\":\"edad\",\"type\":\"long\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<cliente> ENCODER =
-      new BinaryMessageEncoder<cliente>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<Cliente> ENCODER =
+      new BinaryMessageEncoder<Cliente>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<cliente> DECODER =
-      new BinaryMessageDecoder<cliente>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<Cliente> DECODER =
+      new BinaryMessageDecoder<Cliente>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<cliente> getEncoder() {
+  public static BinaryMessageEncoder<Cliente> getEncoder() {
     return ENCODER;
   }
 
@@ -38,7 +38,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<cliente> getDecoder() {
+  public static BinaryMessageDecoder<Cliente> getDecoder() {
     return DECODER;
   }
 
@@ -47,12 +47,12 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<cliente> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<cliente>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<Cliente> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<Cliente>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this cliente to a ByteBuffer.
+   * Serializes this Cliente to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -61,12 +61,12 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   /**
-   * Deserializes a cliente from a ByteBuffer.
+   * Deserializes a Cliente from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a cliente instance decoded from the given buffer
+   * @return a Cliente instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static cliente fromByteBuffer(
+  public static Cliente fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -75,7 +75,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
    private java.lang.CharSequence apellido;
    private java.lang.CharSequence nif;
    private java.lang.CharSequence telefono;
-   private com.example.productor.avro.direccion direccion;
+   private com.example.productor.avro.Direccion Direccion;
    private long edad;
 
   /**
@@ -83,7 +83,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public cliente() {}
+  public Cliente() {}
 
   /**
    * All-args constructor.
@@ -91,15 +91,15 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
    * @param apellido The new value for apellido
    * @param nif The new value for nif
    * @param telefono The new value for telefono
-   * @param direccion The new value for direccion
+   * @param Direccion The new value for Direccion
    * @param edad The new value for edad
    */
-  public cliente(java.lang.CharSequence nombre, java.lang.CharSequence apellido, java.lang.CharSequence nif, java.lang.CharSequence telefono, com.example.productor.avro.direccion direccion, java.lang.Long edad) {
+  public Cliente(java.lang.CharSequence nombre, java.lang.CharSequence apellido, java.lang.CharSequence nif, java.lang.CharSequence telefono, com.example.productor.avro.Direccion Direccion, java.lang.Long edad) {
     this.nombre = nombre;
     this.apellido = apellido;
     this.nif = nif;
     this.telefono = telefono;
-    this.direccion = direccion;
+    this.Direccion = Direccion;
     this.edad = edad;
   }
 
@@ -112,7 +112,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
     case 1: return apellido;
     case 2: return nif;
     case 3: return telefono;
-    case 4: return direccion;
+    case 4: return Direccion;
     case 5: return edad;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
@@ -126,7 +126,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
     case 1: apellido = (java.lang.CharSequence)value$; break;
     case 2: nif = (java.lang.CharSequence)value$; break;
     case 3: telefono = (java.lang.CharSequence)value$; break;
-    case 4: direccion = (com.example.productor.avro.direccion)value$; break;
+    case 4: Direccion = (com.example.productor.avro.Direccion)value$; break;
     case 5: edad = (java.lang.Long)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
@@ -201,20 +201,20 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   /**
-   * Gets the value of the 'direccion' field.
-   * @return The value of the 'direccion' field.
+   * Gets the value of the 'Direccion' field.
+   * @return The value of the 'Direccion' field.
    */
-  public com.example.productor.avro.direccion getDireccion() {
-    return direccion;
+  public com.example.productor.avro.Direccion getDireccion() {
+    return Direccion;
   }
 
 
   /**
-   * Sets the value of the 'direccion' field.
+   * Sets the value of the 'Direccion' field.
    * @param value the value to set.
    */
-  public void setDireccion(com.example.productor.avro.direccion value) {
-    this.direccion = value;
+  public void setDireccion(com.example.productor.avro.Direccion value) {
+    this.Direccion = value;
   }
 
   /**
@@ -235,52 +235,52 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   /**
-   * Creates a new cliente RecordBuilder.
-   * @return A new cliente RecordBuilder
+   * Creates a new Cliente RecordBuilder.
+   * @return A new Cliente RecordBuilder
    */
-  public static com.example.productor.avro.cliente.Builder newBuilder() {
-    return new com.example.productor.avro.cliente.Builder();
+  public static com.example.productor.avro.Cliente.Builder newBuilder() {
+    return new com.example.productor.avro.Cliente.Builder();
   }
 
   /**
-   * Creates a new cliente RecordBuilder by copying an existing Builder.
+   * Creates a new Cliente RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new cliente RecordBuilder
+   * @return A new Cliente RecordBuilder
    */
-  public static com.example.productor.avro.cliente.Builder newBuilder(com.example.productor.avro.cliente.Builder other) {
+  public static com.example.productor.avro.Cliente.Builder newBuilder(com.example.productor.avro.Cliente.Builder other) {
     if (other == null) {
-      return new com.example.productor.avro.cliente.Builder();
+      return new com.example.productor.avro.Cliente.Builder();
     } else {
-      return new com.example.productor.avro.cliente.Builder(other);
+      return new com.example.productor.avro.Cliente.Builder(other);
     }
   }
 
   /**
-   * Creates a new cliente RecordBuilder by copying an existing cliente instance.
+   * Creates a new Cliente RecordBuilder by copying an existing Cliente instance.
    * @param other The existing instance to copy.
-   * @return A new cliente RecordBuilder
+   * @return A new Cliente RecordBuilder
    */
-  public static com.example.productor.avro.cliente.Builder newBuilder(com.example.productor.avro.cliente other) {
+  public static com.example.productor.avro.Cliente.Builder newBuilder(com.example.productor.avro.Cliente other) {
     if (other == null) {
-      return new com.example.productor.avro.cliente.Builder();
+      return new com.example.productor.avro.Cliente.Builder();
     } else {
-      return new com.example.productor.avro.cliente.Builder(other);
+      return new com.example.productor.avro.Cliente.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for cliente instances.
+   * RecordBuilder for Cliente instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<cliente>
-    implements org.apache.avro.data.RecordBuilder<cliente> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Cliente>
+    implements org.apache.avro.data.RecordBuilder<Cliente> {
 
     private java.lang.CharSequence nombre;
     private java.lang.CharSequence apellido;
     private java.lang.CharSequence nif;
     private java.lang.CharSequence telefono;
-    private com.example.productor.avro.direccion direccion;
-    private com.example.productor.avro.direccion.Builder direccionBuilder;
+    private com.example.productor.avro.Direccion Direccion;
+    private com.example.productor.avro.Direccion.Builder DireccionBuilder;
     private long edad;
 
     /** Creates a new Builder */
@@ -292,7 +292,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.example.productor.avro.cliente.Builder other) {
+    private Builder(com.example.productor.avro.Cliente.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.nombre)) {
         this.nombre = data().deepCopy(fields()[0].schema(), other.nombre);
@@ -310,12 +310,12 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
         this.telefono = data().deepCopy(fields()[3].schema(), other.telefono);
         fieldSetFlags()[3] = other.fieldSetFlags()[3];
       }
-      if (isValidValue(fields()[4], other.direccion)) {
-        this.direccion = data().deepCopy(fields()[4].schema(), other.direccion);
+      if (isValidValue(fields()[4], other.Direccion)) {
+        this.Direccion = data().deepCopy(fields()[4].schema(), other.Direccion);
         fieldSetFlags()[4] = other.fieldSetFlags()[4];
       }
       if (other.hasDireccionBuilder()) {
-        this.direccionBuilder = com.example.productor.avro.direccion.newBuilder(other.getDireccionBuilder());
+        this.DireccionBuilder = com.example.productor.avro.Direccion.newBuilder(other.getDireccionBuilder());
       }
       if (isValidValue(fields()[5], other.edad)) {
         this.edad = data().deepCopy(fields()[5].schema(), other.edad);
@@ -324,10 +324,10 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
     }
 
     /**
-     * Creates a Builder by copying an existing cliente instance
+     * Creates a Builder by copying an existing Cliente instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.example.productor.avro.cliente other) {
+    private Builder(com.example.productor.avro.Cliente other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.nombre)) {
         this.nombre = data().deepCopy(fields()[0].schema(), other.nombre);
@@ -345,11 +345,11 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
         this.telefono = data().deepCopy(fields()[3].schema(), other.telefono);
         fieldSetFlags()[3] = true;
       }
-      if (isValidValue(fields()[4], other.direccion)) {
-        this.direccion = data().deepCopy(fields()[4].schema(), other.direccion);
+      if (isValidValue(fields()[4], other.Direccion)) {
+        this.Direccion = data().deepCopy(fields()[4].schema(), other.Direccion);
         fieldSetFlags()[4] = true;
       }
-      this.direccionBuilder = null;
+      this.DireccionBuilder = null;
       if (isValidValue(fields()[5], other.edad)) {
         this.edad = data().deepCopy(fields()[5].schema(), other.edad);
         fieldSetFlags()[5] = true;
@@ -370,7 +370,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'nombre'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setNombre(java.lang.CharSequence value) {
+    public com.example.productor.avro.Cliente.Builder setNombre(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.nombre = value;
       fieldSetFlags()[0] = true;
@@ -390,7 +390,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'nombre' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearNombre() {
+    public com.example.productor.avro.Cliente.Builder clearNombre() {
       nombre = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -410,7 +410,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'apellido'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setApellido(java.lang.CharSequence value) {
+    public com.example.productor.avro.Cliente.Builder setApellido(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.apellido = value;
       fieldSetFlags()[1] = true;
@@ -430,7 +430,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'apellido' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearApellido() {
+    public com.example.productor.avro.Cliente.Builder clearApellido() {
       apellido = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -450,7 +450,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'nif'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setNif(java.lang.CharSequence value) {
+    public com.example.productor.avro.Cliente.Builder setNif(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.nif = value;
       fieldSetFlags()[2] = true;
@@ -470,7 +470,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'nif' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearNif() {
+    public com.example.productor.avro.Cliente.Builder clearNif() {
       nif = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -490,7 +490,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'telefono'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setTelefono(java.lang.CharSequence value) {
+    public com.example.productor.avro.Cliente.Builder setTelefono(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.telefono = value;
       fieldSetFlags()[3] = true;
@@ -510,84 +510,84 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'telefono' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearTelefono() {
+    public com.example.productor.avro.Cliente.Builder clearTelefono() {
       telefono = null;
       fieldSetFlags()[3] = false;
       return this;
     }
 
     /**
-      * Gets the value of the 'direccion' field.
+      * Gets the value of the 'Direccion' field.
       * @return The value.
       */
-    public com.example.productor.avro.direccion getDireccion() {
-      return direccion;
+    public com.example.productor.avro.Direccion getDireccion() {
+      return Direccion;
     }
 
 
     /**
-      * Sets the value of the 'direccion' field.
-      * @param value The value of 'direccion'.
+      * Sets the value of the 'Direccion' field.
+      * @param value The value of 'Direccion'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setDireccion(com.example.productor.avro.direccion value) {
+    public com.example.productor.avro.Cliente.Builder setDireccion(com.example.productor.avro.Direccion value) {
       validate(fields()[4], value);
-      this.direccionBuilder = null;
-      this.direccion = value;
+      this.DireccionBuilder = null;
+      this.Direccion = value;
       fieldSetFlags()[4] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'direccion' field has been set.
-      * @return True if the 'direccion' field has been set, false otherwise.
+      * Checks whether the 'Direccion' field has been set.
+      * @return True if the 'Direccion' field has been set, false otherwise.
       */
     public boolean hasDireccion() {
       return fieldSetFlags()[4];
     }
 
     /**
-     * Gets the Builder instance for the 'direccion' field and creates one if it doesn't exist yet.
+     * Gets the Builder instance for the 'Direccion' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.example.productor.avro.direccion.Builder getDireccionBuilder() {
-      if (direccionBuilder == null) {
+    public com.example.productor.avro.Direccion.Builder getDireccionBuilder() {
+      if (DireccionBuilder == null) {
         if (hasDireccion()) {
-          setDireccionBuilder(com.example.productor.avro.direccion.newBuilder(direccion));
+          setDireccionBuilder(com.example.productor.avro.Direccion.newBuilder(Direccion));
         } else {
-          setDireccionBuilder(com.example.productor.avro.direccion.newBuilder());
+          setDireccionBuilder(com.example.productor.avro.Direccion.newBuilder());
         }
       }
-      return direccionBuilder;
+      return DireccionBuilder;
     }
 
     /**
-     * Sets the Builder instance for the 'direccion' field
+     * Sets the Builder instance for the 'Direccion' field
      * @param value The builder instance that must be set.
      * @return This builder.
      */
 
-    public com.example.productor.avro.cliente.Builder setDireccionBuilder(com.example.productor.avro.direccion.Builder value) {
+    public com.example.productor.avro.Cliente.Builder setDireccionBuilder(com.example.productor.avro.Direccion.Builder value) {
       clearDireccion();
-      direccionBuilder = value;
+      DireccionBuilder = value;
       return this;
     }
 
     /**
-     * Checks whether the 'direccion' field has an active Builder instance
-     * @return True if the 'direccion' field has an active Builder instance
+     * Checks whether the 'Direccion' field has an active Builder instance
+     * @return True if the 'Direccion' field has an active Builder instance
      */
     public boolean hasDireccionBuilder() {
-      return direccionBuilder != null;
+      return DireccionBuilder != null;
     }
 
     /**
-      * Clears the value of the 'direccion' field.
+      * Clears the value of the 'Direccion' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearDireccion() {
-      direccion = null;
-      direccionBuilder = null;
+    public com.example.productor.avro.Cliente.Builder clearDireccion() {
+      Direccion = null;
+      DireccionBuilder = null;
       fieldSetFlags()[4] = false;
       return this;
     }
@@ -606,7 +606,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * @param value The value of 'edad'.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder setEdad(long value) {
+    public com.example.productor.avro.Cliente.Builder setEdad(long value) {
       validate(fields()[5], value);
       this.edad = value;
       fieldSetFlags()[5] = true;
@@ -626,29 +626,29 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
       * Clears the value of the 'edad' field.
       * @return This builder.
       */
-    public com.example.productor.avro.cliente.Builder clearEdad() {
+    public com.example.productor.avro.Cliente.Builder clearEdad() {
       fieldSetFlags()[5] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public cliente build() {
+    public Cliente build() {
       try {
-        cliente record = new cliente();
+        Cliente record = new Cliente();
         record.nombre = fieldSetFlags()[0] ? this.nombre : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.apellido = fieldSetFlags()[1] ? this.apellido : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.nif = fieldSetFlags()[2] ? this.nif : (java.lang.CharSequence) defaultValue(fields()[2]);
         record.telefono = fieldSetFlags()[3] ? this.telefono : (java.lang.CharSequence) defaultValue(fields()[3]);
-        if (direccionBuilder != null) {
+        if (DireccionBuilder != null) {
           try {
-            record.direccion = this.direccionBuilder.build();
+            record.Direccion = this.DireccionBuilder.build();
           } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("direccion"));
+            e.addParentField(record.getSchema().getField("Direccion"));
             throw e;
           }
         } else {
-          record.direccion = fieldSetFlags()[4] ? this.direccion : (com.example.productor.avro.direccion) defaultValue(fields()[4]);
+          record.Direccion = fieldSetFlags()[4] ? this.Direccion : (com.example.productor.avro.Direccion) defaultValue(fields()[4]);
         }
         record.edad = fieldSetFlags()[5] ? this.edad : (java.lang.Long) defaultValue(fields()[5]);
         return record;
@@ -661,8 +661,8 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<cliente>
-    WRITER$ = (org.apache.avro.io.DatumWriter<cliente>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<Cliente>
+    WRITER$ = (org.apache.avro.io.DatumWriter<Cliente>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -670,8 +670,8 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<cliente>
-    READER$ = (org.apache.avro.io.DatumReader<cliente>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<Cliente>
+    READER$ = (org.apache.avro.io.DatumReader<Cliente>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
@@ -691,7 +691,7 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
 
     out.writeString(this.telefono);
 
-    this.direccion.customEncode(out);
+    this.Direccion.customEncode(out);
 
     out.writeLong(this.edad);
 
@@ -710,10 +710,10 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
 
       this.telefono = in.readString(this.telefono instanceof Utf8 ? (Utf8)this.telefono : null);
 
-      if (this.direccion == null) {
-        this.direccion = new com.example.productor.avro.direccion();
+      if (this.Direccion == null) {
+        this.Direccion = new com.example.productor.avro.Direccion();
       }
-      this.direccion.customDecode(in);
+      this.Direccion.customDecode(in);
 
       this.edad = in.readLong();
 
@@ -737,10 +737,10 @@ public class cliente extends org.apache.avro.specific.SpecificRecordBase impleme
           break;
 
         case 4:
-          if (this.direccion == null) {
-            this.direccion = new com.example.productor.avro.direccion();
+          if (this.Direccion == null) {
+            this.Direccion = new com.example.productor.avro.Direccion();
           }
-          this.direccion.customDecode(in);
+          this.Direccion.customDecode(in);
           break;
 
         case 5:

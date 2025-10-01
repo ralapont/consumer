@@ -13,24 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -5500942693775293626L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"clienteAvro\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"cliente\",\"type\":{\"type\":\"record\",\"name\":\"cliente\",\"fields\":[{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"apellido\",\"type\":\"string\"},{\"name\":\"nif\",\"type\":\"string\"},{\"name\":\"telefono\",\"type\":\"string\"},{\"name\":\"direccion\",\"type\":{\"type\":\"record\",\"name\":\"direccion\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}},{\"name\":\"edad\",\"type\":\"long\"}]}}]}");
+public class ClienteAvro extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = -3049644350623954699L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"ClienteAvro\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"Cliente\",\"type\":{\"type\":\"record\",\"name\":\"Cliente\",\"fields\":[{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"apellido\",\"type\":\"string\"},{\"name\":\"nif\",\"type\":\"string\"},{\"name\":\"telefono\",\"type\":\"string\"},{\"name\":\"Direccion\",\"type\":{\"type\":\"record\",\"name\":\"Direccion\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}},{\"name\":\"edad\",\"type\":\"long\"}]}}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<clienteAvro> ENCODER =
-      new BinaryMessageEncoder<clienteAvro>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<ClienteAvro> ENCODER =
+      new BinaryMessageEncoder<ClienteAvro>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<clienteAvro> DECODER =
-      new BinaryMessageDecoder<clienteAvro>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<ClienteAvro> DECODER =
+      new BinaryMessageDecoder<ClienteAvro>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<clienteAvro> getEncoder() {
+  public static BinaryMessageEncoder<ClienteAvro> getEncoder() {
     return ENCODER;
   }
 
@@ -38,7 +38,7 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<clienteAvro> getDecoder() {
+  public static BinaryMessageDecoder<ClienteAvro> getDecoder() {
     return DECODER;
   }
 
@@ -47,12 +47,12 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<clienteAvro> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<clienteAvro>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<ClienteAvro> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<ClienteAvro>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this clienteAvro to a ByteBuffer.
+   * Serializes this ClienteAvro to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -61,31 +61,31 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   }
 
   /**
-   * Deserializes a clienteAvro from a ByteBuffer.
+   * Deserializes a ClienteAvro from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a clienteAvro instance decoded from the given buffer
+   * @return a ClienteAvro instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static clienteAvro fromByteBuffer(
+  public static ClienteAvro fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
 
-   private com.example.productor.avro.cliente cliente;
+   private com.example.productor.avro.Cliente Cliente;
 
   /**
    * Default constructor.  Note that this does not initialize fields
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public clienteAvro() {}
+  public ClienteAvro() {}
 
   /**
    * All-args constructor.
-   * @param cliente The new value for cliente
+   * @param Cliente The new value for Cliente
    */
-  public clienteAvro(com.example.productor.avro.cliente cliente) {
-    this.cliente = cliente;
+  public ClienteAvro(com.example.productor.avro.Cliente Cliente) {
+    this.Cliente = Cliente;
   }
 
   public org.apache.avro.specific.SpecificData getSpecificData() { return MODEL$; }
@@ -93,7 +93,7 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   // Used by DatumWriter.  Applications should not call.
   public java.lang.Object get(int field$) {
     switch (field$) {
-    case 0: return cliente;
+    case 0: return Cliente;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
@@ -102,71 +102,71 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   @SuppressWarnings(value="unchecked")
   public void put(int field$, java.lang.Object value$) {
     switch (field$) {
-    case 0: cliente = (com.example.productor.avro.cliente)value$; break;
+    case 0: Cliente = (com.example.productor.avro.Cliente)value$; break;
     default: throw new IndexOutOfBoundsException("Invalid index: " + field$);
     }
   }
 
   /**
-   * Gets the value of the 'cliente' field.
-   * @return The value of the 'cliente' field.
+   * Gets the value of the 'Cliente' field.
+   * @return The value of the 'Cliente' field.
    */
-  public com.example.productor.avro.cliente getCliente() {
-    return cliente;
+  public com.example.productor.avro.Cliente getCliente() {
+    return Cliente;
   }
 
 
   /**
-   * Sets the value of the 'cliente' field.
+   * Sets the value of the 'Cliente' field.
    * @param value the value to set.
    */
-  public void setCliente(com.example.productor.avro.cliente value) {
-    this.cliente = value;
+  public void setCliente(com.example.productor.avro.Cliente value) {
+    this.Cliente = value;
   }
 
   /**
-   * Creates a new clienteAvro RecordBuilder.
-   * @return A new clienteAvro RecordBuilder
+   * Creates a new ClienteAvro RecordBuilder.
+   * @return A new ClienteAvro RecordBuilder
    */
-  public static com.example.productor.avro.clienteAvro.Builder newBuilder() {
-    return new com.example.productor.avro.clienteAvro.Builder();
+  public static com.example.productor.avro.ClienteAvro.Builder newBuilder() {
+    return new com.example.productor.avro.ClienteAvro.Builder();
   }
 
   /**
-   * Creates a new clienteAvro RecordBuilder by copying an existing Builder.
+   * Creates a new ClienteAvro RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new clienteAvro RecordBuilder
+   * @return A new ClienteAvro RecordBuilder
    */
-  public static com.example.productor.avro.clienteAvro.Builder newBuilder(com.example.productor.avro.clienteAvro.Builder other) {
+  public static com.example.productor.avro.ClienteAvro.Builder newBuilder(com.example.productor.avro.ClienteAvro.Builder other) {
     if (other == null) {
-      return new com.example.productor.avro.clienteAvro.Builder();
+      return new com.example.productor.avro.ClienteAvro.Builder();
     } else {
-      return new com.example.productor.avro.clienteAvro.Builder(other);
+      return new com.example.productor.avro.ClienteAvro.Builder(other);
     }
   }
 
   /**
-   * Creates a new clienteAvro RecordBuilder by copying an existing clienteAvro instance.
+   * Creates a new ClienteAvro RecordBuilder by copying an existing ClienteAvro instance.
    * @param other The existing instance to copy.
-   * @return A new clienteAvro RecordBuilder
+   * @return A new ClienteAvro RecordBuilder
    */
-  public static com.example.productor.avro.clienteAvro.Builder newBuilder(com.example.productor.avro.clienteAvro other) {
+  public static com.example.productor.avro.ClienteAvro.Builder newBuilder(com.example.productor.avro.ClienteAvro other) {
     if (other == null) {
-      return new com.example.productor.avro.clienteAvro.Builder();
+      return new com.example.productor.avro.ClienteAvro.Builder();
     } else {
-      return new com.example.productor.avro.clienteAvro.Builder(other);
+      return new com.example.productor.avro.ClienteAvro.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for clienteAvro instances.
+   * RecordBuilder for ClienteAvro instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<clienteAvro>
-    implements org.apache.avro.data.RecordBuilder<clienteAvro> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<ClienteAvro>
+    implements org.apache.avro.data.RecordBuilder<ClienteAvro> {
 
-    private com.example.productor.avro.cliente cliente;
-    private com.example.productor.avro.cliente.Builder clienteBuilder;
+    private com.example.productor.avro.Cliente Cliente;
+    private com.example.productor.avro.Cliente.Builder ClienteBuilder;
 
     /** Creates a new Builder */
     private Builder() {
@@ -177,120 +177,120 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.example.productor.avro.clienteAvro.Builder other) {
+    private Builder(com.example.productor.avro.ClienteAvro.Builder other) {
       super(other);
-      if (isValidValue(fields()[0], other.cliente)) {
-        this.cliente = data().deepCopy(fields()[0].schema(), other.cliente);
+      if (isValidValue(fields()[0], other.Cliente)) {
+        this.Cliente = data().deepCopy(fields()[0].schema(), other.Cliente);
         fieldSetFlags()[0] = other.fieldSetFlags()[0];
       }
       if (other.hasClienteBuilder()) {
-        this.clienteBuilder = com.example.productor.avro.cliente.newBuilder(other.getClienteBuilder());
+        this.ClienteBuilder = com.example.productor.avro.Cliente.newBuilder(other.getClienteBuilder());
       }
     }
 
     /**
-     * Creates a Builder by copying an existing clienteAvro instance
+     * Creates a Builder by copying an existing ClienteAvro instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.example.productor.avro.clienteAvro other) {
+    private Builder(com.example.productor.avro.ClienteAvro other) {
       super(SCHEMA$);
-      if (isValidValue(fields()[0], other.cliente)) {
-        this.cliente = data().deepCopy(fields()[0].schema(), other.cliente);
+      if (isValidValue(fields()[0], other.Cliente)) {
+        this.Cliente = data().deepCopy(fields()[0].schema(), other.Cliente);
         fieldSetFlags()[0] = true;
       }
-      this.clienteBuilder = null;
+      this.ClienteBuilder = null;
     }
 
     /**
-      * Gets the value of the 'cliente' field.
+      * Gets the value of the 'Cliente' field.
       * @return The value.
       */
-    public com.example.productor.avro.cliente getCliente() {
-      return cliente;
+    public com.example.productor.avro.Cliente getCliente() {
+      return Cliente;
     }
 
 
     /**
-      * Sets the value of the 'cliente' field.
-      * @param value The value of 'cliente'.
+      * Sets the value of the 'Cliente' field.
+      * @param value The value of 'Cliente'.
       * @return This builder.
       */
-    public com.example.productor.avro.clienteAvro.Builder setCliente(com.example.productor.avro.cliente value) {
+    public com.example.productor.avro.ClienteAvro.Builder setCliente(com.example.productor.avro.Cliente value) {
       validate(fields()[0], value);
-      this.clienteBuilder = null;
-      this.cliente = value;
+      this.ClienteBuilder = null;
+      this.Cliente = value;
       fieldSetFlags()[0] = true;
       return this;
     }
 
     /**
-      * Checks whether the 'cliente' field has been set.
-      * @return True if the 'cliente' field has been set, false otherwise.
+      * Checks whether the 'Cliente' field has been set.
+      * @return True if the 'Cliente' field has been set, false otherwise.
       */
     public boolean hasCliente() {
       return fieldSetFlags()[0];
     }
 
     /**
-     * Gets the Builder instance for the 'cliente' field and creates one if it doesn't exist yet.
+     * Gets the Builder instance for the 'Cliente' field and creates one if it doesn't exist yet.
      * @return This builder.
      */
-    public com.example.productor.avro.cliente.Builder getClienteBuilder() {
-      if (clienteBuilder == null) {
+    public com.example.productor.avro.Cliente.Builder getClienteBuilder() {
+      if (ClienteBuilder == null) {
         if (hasCliente()) {
-          setClienteBuilder(com.example.productor.avro.cliente.newBuilder(cliente));
+          setClienteBuilder(com.example.productor.avro.Cliente.newBuilder(Cliente));
         } else {
-          setClienteBuilder(com.example.productor.avro.cliente.newBuilder());
+          setClienteBuilder(com.example.productor.avro.Cliente.newBuilder());
         }
       }
-      return clienteBuilder;
+      return ClienteBuilder;
     }
 
     /**
-     * Sets the Builder instance for the 'cliente' field
+     * Sets the Builder instance for the 'Cliente' field
      * @param value The builder instance that must be set.
      * @return This builder.
      */
 
-    public com.example.productor.avro.clienteAvro.Builder setClienteBuilder(com.example.productor.avro.cliente.Builder value) {
+    public com.example.productor.avro.ClienteAvro.Builder setClienteBuilder(com.example.productor.avro.Cliente.Builder value) {
       clearCliente();
-      clienteBuilder = value;
+      ClienteBuilder = value;
       return this;
     }
 
     /**
-     * Checks whether the 'cliente' field has an active Builder instance
-     * @return True if the 'cliente' field has an active Builder instance
+     * Checks whether the 'Cliente' field has an active Builder instance
+     * @return True if the 'Cliente' field has an active Builder instance
      */
     public boolean hasClienteBuilder() {
-      return clienteBuilder != null;
+      return ClienteBuilder != null;
     }
 
     /**
-      * Clears the value of the 'cliente' field.
+      * Clears the value of the 'Cliente' field.
       * @return This builder.
       */
-    public com.example.productor.avro.clienteAvro.Builder clearCliente() {
-      cliente = null;
-      clienteBuilder = null;
+    public com.example.productor.avro.ClienteAvro.Builder clearCliente() {
+      Cliente = null;
+      ClienteBuilder = null;
       fieldSetFlags()[0] = false;
       return this;
     }
 
     @Override
     @SuppressWarnings("unchecked")
-    public clienteAvro build() {
+    public ClienteAvro build() {
       try {
-        clienteAvro record = new clienteAvro();
-        if (clienteBuilder != null) {
+        ClienteAvro record = new ClienteAvro();
+        if (ClienteBuilder != null) {
           try {
-            record.cliente = this.clienteBuilder.build();
+            record.Cliente = this.ClienteBuilder.build();
           } catch (org.apache.avro.AvroMissingFieldException e) {
-            e.addParentField(record.getSchema().getField("cliente"));
+            e.addParentField(record.getSchema().getField("Cliente"));
             throw e;
           }
         } else {
-          record.cliente = fieldSetFlags()[0] ? this.cliente : (com.example.productor.avro.cliente) defaultValue(fields()[0]);
+          record.Cliente = fieldSetFlags()[0] ? this.Cliente : (com.example.productor.avro.Cliente) defaultValue(fields()[0]);
         }
         return record;
       } catch (org.apache.avro.AvroMissingFieldException e) {
@@ -302,8 +302,8 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<clienteAvro>
-    WRITER$ = (org.apache.avro.io.DatumWriter<clienteAvro>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<ClienteAvro>
+    WRITER$ = (org.apache.avro.io.DatumWriter<ClienteAvro>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -311,8 +311,8 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<clienteAvro>
-    READER$ = (org.apache.avro.io.DatumReader<clienteAvro>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<ClienteAvro>
+    READER$ = (org.apache.avro.io.DatumReader<ClienteAvro>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
@@ -324,7 +324,7 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   @Override public void customEncode(org.apache.avro.io.Encoder out)
     throws java.io.IOException
   {
-    this.cliente.customEncode(out);
+    this.Cliente.customEncode(out);
 
   }
 
@@ -333,19 +333,19 @@ public class clienteAvro extends org.apache.avro.specific.SpecificRecordBase imp
   {
     org.apache.avro.Schema.Field[] fieldOrder = in.readFieldOrderIfDiff();
     if (fieldOrder == null) {
-      if (this.cliente == null) {
-        this.cliente = new com.example.productor.avro.cliente();
+      if (this.Cliente == null) {
+        this.Cliente = new com.example.productor.avro.Cliente();
       }
-      this.cliente.customDecode(in);
+      this.Cliente.customDecode(in);
 
     } else {
       for (int i = 0; i < 1; i++) {
         switch (fieldOrder[i].pos()) {
         case 0:
-          if (this.cliente == null) {
-            this.cliente = new com.example.productor.avro.cliente();
+          if (this.Cliente == null) {
+            this.Cliente = new com.example.productor.avro.Cliente();
           }
-          this.cliente.customDecode(in);
+          this.Cliente.customDecode(in);
           break;
 
         default:

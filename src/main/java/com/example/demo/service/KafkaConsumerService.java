@@ -4,7 +4,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
-import com.example.productor.avro.clienteAvro;
+import com.example.productor.avro.ClienteAvro;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -15,12 +15,12 @@ import lombok.extern.slf4j.Slf4j;
 public class KafkaConsumerService {
 
 	@KafkaListener(topics = "${app.config.topic-name}", groupId = "${app.config.grooup-id}")
-	public void listen(ConsumerRecord<String, clienteAvro> message) {
+	public void listen(ConsumerRecord<String, ClienteAvro> message) {
 		
 		log.info("offset: {}", message.offset());
 		log.info("key: {}", message.key());
 		
-		clienteAvro clienteAvro = message.value();
+		ClienteAvro clienteAvro = message.value();
 		
 		log.info("Value: {}", message.value());
 		log.info("Cliente nombre: {}", clienteAvro.getCliente().getNombre());

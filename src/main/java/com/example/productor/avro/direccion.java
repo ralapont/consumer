@@ -13,24 +13,24 @@ import org.apache.avro.message.BinaryMessageDecoder;
 import org.apache.avro.message.SchemaStore;
 
 @org.apache.avro.specific.AvroGenerated
-public class direccion extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
-  private static final long serialVersionUID = -349478596205146223L;
-  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"direccion\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}");
+public class Direccion extends org.apache.avro.specific.SpecificRecordBase implements org.apache.avro.specific.SpecificRecord {
+  private static final long serialVersionUID = 6245425116525724816L;
+  public static final org.apache.avro.Schema SCHEMA$ = new org.apache.avro.Schema.Parser().parse("{\"type\":\"record\",\"name\":\"Direccion\",\"namespace\":\"com.example.productor.avro\",\"fields\":[{\"name\":\"tipoVia\",\"type\":\"string\"},{\"name\":\"nombre\",\"type\":\"string\"},{\"name\":\"numero\",\"type\":\"string\"},{\"name\":\"piso\",\"type\":\"string\"},{\"name\":\"codigoPostal\",\"type\":\"string\"},{\"name\":\"poblacion\",\"type\":\"string\"},{\"name\":\"provincia\",\"type\":\"string\"}]}");
   public static org.apache.avro.Schema getClassSchema() { return SCHEMA$; }
 
   private static SpecificData MODEL$ = new SpecificData();
 
-  private static final BinaryMessageEncoder<direccion> ENCODER =
-      new BinaryMessageEncoder<direccion>(MODEL$, SCHEMA$);
+  private static final BinaryMessageEncoder<Direccion> ENCODER =
+      new BinaryMessageEncoder<Direccion>(MODEL$, SCHEMA$);
 
-  private static final BinaryMessageDecoder<direccion> DECODER =
-      new BinaryMessageDecoder<direccion>(MODEL$, SCHEMA$);
+  private static final BinaryMessageDecoder<Direccion> DECODER =
+      new BinaryMessageDecoder<Direccion>(MODEL$, SCHEMA$);
 
   /**
    * Return the BinaryMessageEncoder instance used by this class.
    * @return the message encoder used by this class
    */
-  public static BinaryMessageEncoder<direccion> getEncoder() {
+  public static BinaryMessageEncoder<Direccion> getEncoder() {
     return ENCODER;
   }
 
@@ -38,7 +38,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
    * Return the BinaryMessageDecoder instance used by this class.
    * @return the message decoder used by this class
    */
-  public static BinaryMessageDecoder<direccion> getDecoder() {
+  public static BinaryMessageDecoder<Direccion> getDecoder() {
     return DECODER;
   }
 
@@ -47,12 +47,12 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
    * @param resolver a {@link SchemaStore} used to find schemas by fingerprint
    * @return a BinaryMessageDecoder instance for this class backed by the given SchemaStore
    */
-  public static BinaryMessageDecoder<direccion> createDecoder(SchemaStore resolver) {
-    return new BinaryMessageDecoder<direccion>(MODEL$, SCHEMA$, resolver);
+  public static BinaryMessageDecoder<Direccion> createDecoder(SchemaStore resolver) {
+    return new BinaryMessageDecoder<Direccion>(MODEL$, SCHEMA$, resolver);
   }
 
   /**
-   * Serializes this direccion to a ByteBuffer.
+   * Serializes this Direccion to a ByteBuffer.
    * @return a buffer holding the serialized data for this instance
    * @throws java.io.IOException if this instance could not be serialized
    */
@@ -61,12 +61,12 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
-   * Deserializes a direccion from a ByteBuffer.
+   * Deserializes a Direccion from a ByteBuffer.
    * @param b a byte buffer holding serialized data for an instance of this class
-   * @return a direccion instance decoded from the given buffer
+   * @return a Direccion instance decoded from the given buffer
    * @throws java.io.IOException if the given bytes could not be deserialized into an instance of this class
    */
-  public static direccion fromByteBuffer(
+  public static Direccion fromByteBuffer(
       java.nio.ByteBuffer b) throws java.io.IOException {
     return DECODER.decode(b);
   }
@@ -84,7 +84,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
    * to their default values from the schema.  If that is desired then
    * one should use <code>newBuilder()</code>.
    */
-  public direccion() {}
+  public Direccion() {}
 
   /**
    * All-args constructor.
@@ -96,7 +96,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
    * @param poblacion The new value for poblacion
    * @param provincia The new value for provincia
    */
-  public direccion(java.lang.CharSequence tipoVia, java.lang.CharSequence nombre, java.lang.CharSequence numero, java.lang.CharSequence piso, java.lang.CharSequence codigoPostal, java.lang.CharSequence poblacion, java.lang.CharSequence provincia) {
+  public Direccion(java.lang.CharSequence tipoVia, java.lang.CharSequence nombre, java.lang.CharSequence numero, java.lang.CharSequence piso, java.lang.CharSequence codigoPostal, java.lang.CharSequence poblacion, java.lang.CharSequence provincia) {
     this.tipoVia = tipoVia;
     this.nombre = nombre;
     this.numero = numero;
@@ -257,45 +257,45 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   /**
-   * Creates a new direccion RecordBuilder.
-   * @return A new direccion RecordBuilder
+   * Creates a new Direccion RecordBuilder.
+   * @return A new Direccion RecordBuilder
    */
-  public static com.example.productor.avro.direccion.Builder newBuilder() {
-    return new com.example.productor.avro.direccion.Builder();
+  public static com.example.productor.avro.Direccion.Builder newBuilder() {
+    return new com.example.productor.avro.Direccion.Builder();
   }
 
   /**
-   * Creates a new direccion RecordBuilder by copying an existing Builder.
+   * Creates a new Direccion RecordBuilder by copying an existing Builder.
    * @param other The existing builder to copy.
-   * @return A new direccion RecordBuilder
+   * @return A new Direccion RecordBuilder
    */
-  public static com.example.productor.avro.direccion.Builder newBuilder(com.example.productor.avro.direccion.Builder other) {
+  public static com.example.productor.avro.Direccion.Builder newBuilder(com.example.productor.avro.Direccion.Builder other) {
     if (other == null) {
-      return new com.example.productor.avro.direccion.Builder();
+      return new com.example.productor.avro.Direccion.Builder();
     } else {
-      return new com.example.productor.avro.direccion.Builder(other);
+      return new com.example.productor.avro.Direccion.Builder(other);
     }
   }
 
   /**
-   * Creates a new direccion RecordBuilder by copying an existing direccion instance.
+   * Creates a new Direccion RecordBuilder by copying an existing Direccion instance.
    * @param other The existing instance to copy.
-   * @return A new direccion RecordBuilder
+   * @return A new Direccion RecordBuilder
    */
-  public static com.example.productor.avro.direccion.Builder newBuilder(com.example.productor.avro.direccion other) {
+  public static com.example.productor.avro.Direccion.Builder newBuilder(com.example.productor.avro.Direccion other) {
     if (other == null) {
-      return new com.example.productor.avro.direccion.Builder();
+      return new com.example.productor.avro.Direccion.Builder();
     } else {
-      return new com.example.productor.avro.direccion.Builder(other);
+      return new com.example.productor.avro.Direccion.Builder(other);
     }
   }
 
   /**
-   * RecordBuilder for direccion instances.
+   * RecordBuilder for Direccion instances.
    */
   @org.apache.avro.specific.AvroGenerated
-  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<direccion>
-    implements org.apache.avro.data.RecordBuilder<direccion> {
+  public static class Builder extends org.apache.avro.specific.SpecificRecordBuilderBase<Direccion>
+    implements org.apache.avro.data.RecordBuilder<Direccion> {
 
     private java.lang.CharSequence tipoVia;
     private java.lang.CharSequence nombre;
@@ -314,7 +314,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
      * Creates a Builder by copying an existing Builder.
      * @param other The existing Builder to copy.
      */
-    private Builder(com.example.productor.avro.direccion.Builder other) {
+    private Builder(com.example.productor.avro.Direccion.Builder other) {
       super(other);
       if (isValidValue(fields()[0], other.tipoVia)) {
         this.tipoVia = data().deepCopy(fields()[0].schema(), other.tipoVia);
@@ -347,10 +347,10 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
     }
 
     /**
-     * Creates a Builder by copying an existing direccion instance
+     * Creates a Builder by copying an existing Direccion instance
      * @param other The existing instance to copy.
      */
-    private Builder(com.example.productor.avro.direccion other) {
+    private Builder(com.example.productor.avro.Direccion other) {
       super(SCHEMA$);
       if (isValidValue(fields()[0], other.tipoVia)) {
         this.tipoVia = data().deepCopy(fields()[0].schema(), other.tipoVia);
@@ -396,7 +396,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'tipoVia'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setTipoVia(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setTipoVia(java.lang.CharSequence value) {
       validate(fields()[0], value);
       this.tipoVia = value;
       fieldSetFlags()[0] = true;
@@ -416,7 +416,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'tipoVia' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearTipoVia() {
+    public com.example.productor.avro.Direccion.Builder clearTipoVia() {
       tipoVia = null;
       fieldSetFlags()[0] = false;
       return this;
@@ -436,7 +436,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'nombre'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setNombre(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setNombre(java.lang.CharSequence value) {
       validate(fields()[1], value);
       this.nombre = value;
       fieldSetFlags()[1] = true;
@@ -456,7 +456,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'nombre' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearNombre() {
+    public com.example.productor.avro.Direccion.Builder clearNombre() {
       nombre = null;
       fieldSetFlags()[1] = false;
       return this;
@@ -476,7 +476,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'numero'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setNumero(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setNumero(java.lang.CharSequence value) {
       validate(fields()[2], value);
       this.numero = value;
       fieldSetFlags()[2] = true;
@@ -496,7 +496,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'numero' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearNumero() {
+    public com.example.productor.avro.Direccion.Builder clearNumero() {
       numero = null;
       fieldSetFlags()[2] = false;
       return this;
@@ -516,7 +516,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'piso'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setPiso(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setPiso(java.lang.CharSequence value) {
       validate(fields()[3], value);
       this.piso = value;
       fieldSetFlags()[3] = true;
@@ -536,7 +536,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'piso' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearPiso() {
+    public com.example.productor.avro.Direccion.Builder clearPiso() {
       piso = null;
       fieldSetFlags()[3] = false;
       return this;
@@ -556,7 +556,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'codigoPostal'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setCodigoPostal(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setCodigoPostal(java.lang.CharSequence value) {
       validate(fields()[4], value);
       this.codigoPostal = value;
       fieldSetFlags()[4] = true;
@@ -576,7 +576,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'codigoPostal' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearCodigoPostal() {
+    public com.example.productor.avro.Direccion.Builder clearCodigoPostal() {
       codigoPostal = null;
       fieldSetFlags()[4] = false;
       return this;
@@ -596,7 +596,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'poblacion'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setPoblacion(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setPoblacion(java.lang.CharSequence value) {
       validate(fields()[5], value);
       this.poblacion = value;
       fieldSetFlags()[5] = true;
@@ -616,7 +616,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'poblacion' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearPoblacion() {
+    public com.example.productor.avro.Direccion.Builder clearPoblacion() {
       poblacion = null;
       fieldSetFlags()[5] = false;
       return this;
@@ -636,7 +636,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * @param value The value of 'provincia'.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder setProvincia(java.lang.CharSequence value) {
+    public com.example.productor.avro.Direccion.Builder setProvincia(java.lang.CharSequence value) {
       validate(fields()[6], value);
       this.provincia = value;
       fieldSetFlags()[6] = true;
@@ -656,7 +656,7 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
       * Clears the value of the 'provincia' field.
       * @return This builder.
       */
-    public com.example.productor.avro.direccion.Builder clearProvincia() {
+    public com.example.productor.avro.Direccion.Builder clearProvincia() {
       provincia = null;
       fieldSetFlags()[6] = false;
       return this;
@@ -664,9 +664,9 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
 
     @Override
     @SuppressWarnings("unchecked")
-    public direccion build() {
+    public Direccion build() {
       try {
-        direccion record = new direccion();
+        Direccion record = new Direccion();
         record.tipoVia = fieldSetFlags()[0] ? this.tipoVia : (java.lang.CharSequence) defaultValue(fields()[0]);
         record.nombre = fieldSetFlags()[1] ? this.nombre : (java.lang.CharSequence) defaultValue(fields()[1]);
         record.numero = fieldSetFlags()[2] ? this.numero : (java.lang.CharSequence) defaultValue(fields()[2]);
@@ -684,8 +684,8 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumWriter<direccion>
-    WRITER$ = (org.apache.avro.io.DatumWriter<direccion>)MODEL$.createDatumWriter(SCHEMA$);
+  private static final org.apache.avro.io.DatumWriter<Direccion>
+    WRITER$ = (org.apache.avro.io.DatumWriter<Direccion>)MODEL$.createDatumWriter(SCHEMA$);
 
   @Override public void writeExternal(java.io.ObjectOutput out)
     throws java.io.IOException {
@@ -693,8 +693,8 @@ public class direccion extends org.apache.avro.specific.SpecificRecordBase imple
   }
 
   @SuppressWarnings("unchecked")
-  private static final org.apache.avro.io.DatumReader<direccion>
-    READER$ = (org.apache.avro.io.DatumReader<direccion>)MODEL$.createDatumReader(SCHEMA$);
+  private static final org.apache.avro.io.DatumReader<Direccion>
+    READER$ = (org.apache.avro.io.DatumReader<Direccion>)MODEL$.createDatumReader(SCHEMA$);
 
   @Override public void readExternal(java.io.ObjectInput in)
     throws java.io.IOException {
