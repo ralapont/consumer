@@ -1,8 +1,18 @@
 spring:
   application:
     name: consumer
-
-server:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/testDB
+    username: admin
+    password: admin123
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+∫server:
   port: 8090
 
 app:
